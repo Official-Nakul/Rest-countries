@@ -3,7 +3,11 @@ import "./CountryCard.css";
 import { Link } from "react-router-dom";
 const CountryCard = ({ data }) => {
   // const { name, population, capital, region, flag } = [...data];
-  console.log(data);
+  // console.log(data);
+  function formatNumber(number) {
+    return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  }
+
   return (
     <div className="cardsContainer">
       <div className="cardHolder">
@@ -16,7 +20,7 @@ const CountryCard = ({ data }) => {
             <div className="details flex-col">
               <span className="flex-row gap-5">
                 <p className="font-600 lable-txt">Population:</p>
-                <p className="font-300">{count.population}</p>
+                <p className="font-300">{formatNumber(count.population)}</p>
               </span>
               <span className="flex-row gap-5">
                 <p className="font-600 lable-txt">Region:</p>

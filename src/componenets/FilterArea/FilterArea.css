@@ -1,0 +1,44 @@
+.subNavBar {
+  grid-column: breakout;
+}
+.serachBarContainer > input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--clr-text-input);
+  height: inherit;
+  width: 22.4em;
+  font-size: 1rem;
+}
+.serachBarContainer > input::placeholder {
+  color: var(--clr-text-input);
+}
+.serachBarContainer {
+  /* justify-content: space-evenly; */
+  gap: 0.6em;
+  align-items: center;
+  background-color: var(--clr-background-secondary);
+  height: 2.85em;
+  width: 25em;
+  border-radius: 5px;
+}
+.serachBarContainer > svg {
+  padding-left: 0.5em;
+}
+.filters > select {
+  width: 11rem;
+  background-color: var(--clr-background-secondary);
+  color: var(--clr-text-input);
+  border: none;
+  outline: none;
+  font-size: 1rem;
+}
+.filters {
+  height: 2.85em;
+  width: 12em;
+  background-color: var(--clr-background-secondary);
+  border-radius: 5px;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+}

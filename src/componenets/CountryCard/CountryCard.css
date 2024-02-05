@@ -23,7 +23,6 @@
 } */
 .cardsContainer {
   grid-column: breakout;
-  margin-top: 2em;
 }
 .cardHolder {
   display: grid;
