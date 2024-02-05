@@ -1,5 +1,5 @@
 import React from "react";
-import "./Themebtn.css";
+import "./ThemeBtn.css";
 const ThemeBtn = ({ isDark, toggleTheme }) => {
   return (
     <div className="togglerBtn flex-row" onClick={toggleTheme}>
