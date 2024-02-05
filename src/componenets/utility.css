@@ -1,0 +1,19 @@
+.flex-row {
+  display: flex;
+}
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+.font-300 {
+  font-weight: 300;
+}
+.font-600 {
+  font-weight: 600;
+}
+.font-800 {
+  font-weight: 800;
+}
+.gap-5 {
+  gap: 0.5rem;
+}

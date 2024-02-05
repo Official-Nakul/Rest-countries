@@ -1,0 +1,16 @@
+.navBar > p {
+  font-size: 1.25rem;
+  justify-content: center;
+  align-items: center;
+}
+.navContainer {
+  height: 3rem;
+  display: grid;
+  grid-template-columns: subgrid;
+  background-color: var(--clr-background-secondary);
+  color: var(--clr-text);
+  grid-column: 1/-1;
+}
+.navBar {
+  grid-column: breakout;
+}
