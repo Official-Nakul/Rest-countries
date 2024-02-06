@@ -15,7 +15,9 @@ const CountryCard = ({ data, searchVal, region }) => {
           .filter((item) => {
             return searchVal === ""
               ? item
-              : item.name.official.toLowerCase().includes(searchVal);
+              : item.name.official
+                  .toLowerCase()
+                  .includes(searchVal.toLowerCase());
           })
           .filter((item) => {
             return region === ""
