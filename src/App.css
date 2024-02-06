@@ -23,3 +23,8 @@ body {
   grid-template-columns: 3em [breakout-start] 1fr [content-start] 1fr [content-end] 1fr [breakout-end] 3em;
   row-gap: 1.25em;
 }
+@media (width<800px) {
+  .container {
+    grid-template-columns: 1em [breakout-start] 1fr [content-start] 1fr [content-end] 1fr [breakout-end] 1em;
+  }
+}
