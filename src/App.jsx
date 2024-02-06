@@ -8,6 +8,8 @@ import "../src/componenets/utility.css";
 function App() {
   const [countryData, setCountryData] = useState([]);
   const [isDark, setIsDark] = useState(1);
+  const [search, setSearch] = useState("");
+  const [region, setRegion] = useState("");
   const toggleTheme = () => {
     const theme = document.querySelector("#theme-toggler");
     theme.classList.toggle("light-theme");
@@ -19,7 +21,12 @@ function App() {
     const data = await res.json();
     setCountryData([...data]);
   };
-
+  const handleSearch = (val) => {
+    setSearch(val);
+  };
+  const handleRegion = (val) => {
+    setRegion(val);
+  };
   useEffect(() => {
     fetchDetails();
     console.log(countryData);
@@ -30,12 +37,19 @@ function App() {
         {/* <BrowserRouter>
           <Routes>
             <Route path="/" element={<NavBar />} />
-            <Route path="/" element={<CountryCard data={countryData} />} />
+            <Route
+              path="/countries"
+              element={<CountryCard data={countryData} />}
+            />
           </Routes>
         </BrowserRouter> */}
         <NavBar isDark={isDark} handleOnClick={toggleTheme} />
-        <FilterArea isDark={isDark} />
-        <CountryCard data={countryData} />
+        <FilterArea
+          isDark={isDark}
+          handleSearch={handleSearch}
+          handleRegion={handleRegion}
+        />
+        <CountryCard data={countryData} searchVal={search} region={region} />
       </div>
     </>
   );

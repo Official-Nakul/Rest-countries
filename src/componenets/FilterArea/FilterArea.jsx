@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./FilterArea.css";
-const FilterArea = ({ isDark }) => {
+const FilterArea = ({ isDark, handleSearch, handleRegion }) => {
   const [searchVal, setSearchVal] = useState("");
   return (
     <div className="subNavBar flex-row">
@@ -32,12 +32,19 @@ const FilterArea = ({ isDark }) => {
           placeholder="Search for a country..."
           value={searchVal}
           onChange={(e) => {
+            handleSearch(e.target.value);
             setSearchVal(e.target.value);
           }}
         />
       </div>
       <div className="filters flex-row">
-        <select name="region" id="">
+        <select
+          name="region"
+          id=""
+          onChange={(e) => {
+            handleRegion(e.target.value);
+          }}
+        >
           <option value="">Filter by Region</option>
           <option value="africa">Africa</option>
           <option value="america">America</option>
