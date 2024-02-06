@@ -37,10 +37,8 @@ const FilterArea = ({ isDark }) => {
         />
       </div>
       <div className="filters flex-row">
-        <select name="region" id="" defaultValue={"Filter by Region"}>
-          <option value="" disabled selected>
-            Filter by Region
-          </option>
+        <select name="region" id="">
+          <option value="">Filter by Region</option>
           <option value="africa">Africa</option>
           <option value="america">America</option>
           <option value="asia">Asia</option>

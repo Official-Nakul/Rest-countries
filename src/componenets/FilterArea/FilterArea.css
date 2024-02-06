@@ -42,3 +42,18 @@
   align-items: center;
   margin-left: auto;
 }
+@media (width<800px) {
+  .subNavBar {
+    display: grid !important;
+    gap: 1em;
+  }
+  .serachBarContainer {
+    width: 100%;
+  }
+  .serachBarContainer input {
+    width: 99%;
+  }
+  .filters {
+    margin-left: 0%;
+  }
+}
