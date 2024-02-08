@@ -1,0 +1,54 @@
+.detailCardContainer {
+  grid-column: breakout;
+}
+.backBtn {
+  width: 6em;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--clr-background-secondary);
+  color: var(--clr-text);
+  border-radius: 5px;
+  box-shadow: 4px 4px var(--clr-background);
+  gap: 0.25em;
+  height: 2em;
+}
+.dataHolder {
+  color: var(--clr-text);
+  gap: 1em;
+}
+
+.detailContainer {
+  margin-top: 2em;
+  gap: 3em;
+}
+.detailContainer img {
+  height: 20em;
+  width: 30em;
+}
+.detailHeading {
+  padding-left: 1rem;
+  font-size: 1.5rem;
+}
+.allDetails {
+  gap: 0.5rem;
+}
+.btnContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+.borderBtn {
+  width: 8em;
+  height: 2em;
+  color: var(--clr-text);
+  background-color: var(--clr-background-secondary);
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  box-shadow: 4px 4px var(--clr-background);
+}
+.borderCountries {
+  gap: 1em;
+}

@@ -25,26 +25,28 @@ const CountryCard = ({ data, searchVal, region }) => {
               : item.region.toLowerCase() === region.toLowerCase();
           })
           .map((count) => (
-            <div className="card flex-col">
-              <img src={count.flags.png} alt="" />
-              <p className="countryName font-800 lable-txt">
-                {count.name.common}
-              </p>
-              <div className="details flex-col">
-                <span className="flex-row gap-5">
-                  <p className="font-600 lable-txt">Population:</p>
-                  <p className="font-300">{formatNumber(count.population)}</p>
-                </span>
-                <span className="flex-row gap-5">
-                  <p className="font-600 lable-txt">Region:</p>
-                  <p className="font-300">{count.region}</p>
-                </span>
-                <span className="flex-row gap-5">
-                  <p className="font-600 lable-txt">capital:</p>
-                  <p className="font-300">{count.capital}</p>
-                </span>
+            <Link className="link" to={`/countries/${count.cca3}`}>
+              <div className="card flex-col">
+                <img src={count.flags.png} alt="" />
+                <p className="countryName font-800 lable-txt">
+                  {count.name.common}
+                </p>
+                <div className="details flex-col">
+                  <span className="flex-row gap-5">
+                    <p className="font-600 lable-txt">Population:</p>
+                    <p className="font-300">{formatNumber(count.population)}</p>
+                  </span>
+                  <span className="flex-row gap-5">
+                    <p className="font-600 lable-txt">Region:</p>
+                    <p className="font-300">{count.region}</p>
+                  </span>
+                  <span className="flex-row gap-5">
+                    <p className="font-600 lable-txt">capital:</p>
+                    <p className="font-300">{count.capital}</p>
+                  </span>
+                </div>
               </div>
-            </div>
+            </Link>
           ))}
       </div>
     </div>

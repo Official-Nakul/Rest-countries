@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
-import CountryCard from "./componenets/CountryCard/CountryCard";
 import NavBar from "./componenets/NavBar/NavBar";
-import FilterArea from "./componenets/FilterArea/FilterArea";
 import "../src/componenets/utility.css";
+import MainPage from "./componenets/MainPage";
+import DetailCard from "./componenets/detailCard/DetailCard";
 function App() {
   const [countryData, setCountryData] = useState([]);
   const [isDark, setIsDark] = useState(1);
@@ -34,22 +34,28 @@ function App() {
   return (
     <>
       <div className="container">
-        {/* <BrowserRouter>
+        <NavBar isDark={isDark} handleOnClick={toggleTheme} />
+        <BrowserRouter>
           <Routes>
-            <Route path="/" element={<NavBar />} />
             <Route
-              path="/countries"
-              element={<CountryCard data={countryData} />}
+              path="/"
+              element={
+                <MainPage
+                  isDark={isDark}
+                  handleRegion={handleRegion}
+                  handleSearch={handleSearch}
+                  countryData={countryData}
+                  search={search}
+                  region={region}
+                />
+              }
+            />
+            <Route
+              path="/countries/:cca3"
+              element={<DetailCard isDark={isDark} data={countryData} />}
             />
           </Routes>
-        </BrowserRouter> */}
-        <NavBar isDark={isDark} handleOnClick={toggleTheme} />
-        <FilterArea
-          isDark={isDark}
-          handleSearch={handleSearch}
-          handleRegion={handleRegion}
-        />
-        <CountryCard data={countryData} searchVal={search} region={region} />
+        </BrowserRouter>
       </div>
     </>
   );
